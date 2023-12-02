@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #29335c;
+    --light-primary: #3f4f8d;
+    --ligthest-color: #e9ebd5;
+    --secondary-color: #774936;
+    --light-secondary: #c08972;
+}
+#modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    
+}
+.overlay {
+    visibility: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-background {
+    background-color: var(--light-primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+#modal-container {
+    z-index: 1;
+    background-color: var(--ligthest-color);
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    max-width: 50%;
+
+}
+
+#movie-title {
+    /*display: flex;*/
+    padding: 1rem 0 2rem 0;
+}
+#modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+#movie-poster {
+    border-radius: 5px;
+}
+#movie-plot{
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+}
+#movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 300px;
+    padding-left: 2rem;
+}
+
+#add-to-list {
+    cursor: pointer;
+    border: 3px solid var(--primary-color);
+    padding: 0.3rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px #000;
+}
+
+#add-to-list:focus,
+#add-to-list:hover {
+    background-color: var(--light-primary);
+    color: var(--ligthest-color);
+}
